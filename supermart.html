@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Supermarket</title>
+
+    <style>
+      body {
+        font-family: Arial;
+        background-color: #f2f2f2;
+      }
+
+      h1 {
+        background-color: green;
+        color: white;
+        text-align: center;
+        padding: 15px;
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      @media (min-width: 600px) {
+        .container {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (min-width: 900px) {
+        .container {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+
+      .card {
+        background-color: white;
+        width: 200px;
+        margin: 15px;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px gray;
+        text-align: center;
+      }
+
+      .card img {
+        width: 100%;
+        height: 120px;
+        border-radius: 10px;
+      }
+
+      .price {
+        color: green;
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      button {
+        background-color: green;
+        color: white;
+        border: none;
+        padding: 8px;
+        margin-top: 5px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      button:hover {
+        background-color: darkgreen;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Supermarket</h1>
+
+    <div class="container">
+      <!-- Product 1 -->
+      <div class="card">
+        <img src="rice.jpg" alt="Rice" />
+        <h3>Rice</h3>
+        <p class="price">₹50/kg</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="card">
+        <img src="apple.jpg" alt="Apple" />
+        <h3>Apple</h3>
+        <p class="price">₹120/kg</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="card">
+        <img src="milk.jpg" alt="Milk" />
+        <h3>Milk</h3>
+        <p class="price">₹60/litre</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="card">
+        <img src="juice1.jpg" alt="Juice" />
+        <h3>Juice</h3>
+        <p class="price">₹80</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </body>
+</html>
